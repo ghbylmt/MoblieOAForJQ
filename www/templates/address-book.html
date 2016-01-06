@@ -1,0 +1,42 @@
+<ion-view view-title="通讯录">
+  <ion-content>
+    <ion-header-bar class="bar bar-header item-input-inset">
+      <label class="item-input-wrapper">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input type="search" placeholder="关键字" ng-model="searchText" ng-change="searchChange()">
+      </label>
+      <button class="button button-clear" ng-click="cancelBtnClick()">
+        取消
+      </button>
+    </ion-header-bar>
+    <h3 class="text-center">{{departmentName}}</h3>
+    <ion-list ng-show="hasUserIn">
+      <a class="item-divider item">人员列表</a>
+      <a class="item item-icon-left" ng-repeat="user in listUserList track by $index"
+         href="#/tab/profilepage/{{user.item0}}">
+        <span class="text-left"><i class="icon ion-ios-person-outline"></i><div style="float: left" class="text-left">
+          {{user.item1}}
+        </div><div
+          style="float: right"
+          class="text-right"> {{user.item3}}
+        </div></span>
+      </a>
+    </ion-list>
+    <ion-list ng-show="hasDepartmentIn">
+      <a class="item-divider item">部门列表</a>
+      <a class="item item-icon-left" ng-repeat="dpt in listDepartment track by $index"
+         href="#/tab/addressbook/{{dpt.item0}}">
+        <span class="text-left"><i class="icon ion-person-stalker"></i><div style="float: left" class="text-left">
+          {{dpt.item1}}
+        </div>
+        </span>
+      </a>
+    </ion-list>
+    <!-- <a class="item item-icon-left" ng-href="http://www.baidu.com"
+        onclick="window.open(this.href,'_system','location=no');"><i class="icon ion-link"></i>Baidu</a>
+     <a class="item item-icon-left" href="#"
+        onclick="window.open('http://www.baidu.com', '_self', 'location=yes'); return false;"><i
+       class="icon ion-link"></i>Open a Browser</a>
+     <a class="item item-icon-left" href="tel:6543200"><i class="icon ion-ios-telephone"></i>Call Cell<p>6543200</p></a>-->
+  </ion-content>
+</ion-view>

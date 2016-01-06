@@ -1,0 +1,37 @@
+<ion-view view-title="设置">
+  <img src="img/bluesky1.png" style="float: left" width="100%">
+  <ion-content class="padding">
+    <div class="row lmt-setting-div">
+      <div class="col col-33 col-offset-33">
+        <img src="img/headpagebeauty.jpg" id="img_setting_profile"
+             style=" border: 3px solid #fff; width: 100px;  height: 100px;  border-radius: 100px;">
+        <br>
+        <span class="text-center" style="font-size: x-large; color: #ffffff"> {{setting_user_name}}</span>
+      </div>
+    </div>
+    <ul class="list">
+      <li class="item item-toggle">
+        接收消息推送
+        <label class="toggle toggle-positive">
+          <input type="checkbox">
+
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+      <a class="item">
+        修改资料
+      </a>
+      <a class="item" ng-click="about();">
+        关于我们
+      </a>
+      <a class="item">
+        问题反馈
+      </a>
+      <button class="button button-assertive button-full icon-left" ng-click="logout();"><i
+        class="icon ion-log-in"></i>&nbsp;退出登录
+      </button>
+    </ul>
+  </ion-content>
+</ion-view>

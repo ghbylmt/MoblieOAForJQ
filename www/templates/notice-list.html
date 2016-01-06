@@ -1,0 +1,22 @@
+<ion-view view-title="通知公告">
+  <ion-content>
+    <ion-header-bar class="bar bar-header item-input-inset">
+      <label class="item-input-wrapper">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input type="search" placeholder="关键字" ng-model="searchText" ng-change="searchChange()">
+      </label>
+      <button class="button button-clear" ng-click="cancelBtnClick()">
+        取消
+      </button>
+    </ion-header-bar>
+    <ion-list>
+      <a class="item" ng-repeat="notice in notices track by $index" href="#/tab/notices_list/{{notice.item0}}">
+        <h2>{{notice.item1}}</h2>
+        <h6 class="text-right">发布时间：{{notice.item2}}</h6>
+      </a>
+      <a class="item text-center" ng-click="loadMoreClick();">加载更多...</a>
+    </ion-list>
+    <ion-list>
+      <ion-item class="text-center" style="font-size: xx-small;">©2015&nbsp;信息中心</ion-item>
+    </ion-list>
+</ion-view>

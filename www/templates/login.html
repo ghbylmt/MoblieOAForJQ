@@ -1,0 +1,60 @@
+<!--
+    登录的页面
+    2015-12-30 14:44:05
+    by LMT
+-->
+<ion-view title="掌上江泉">
+  <div ng-include="'templates/sign-in.html'" ng-if="loginflag"></div>
+  <div ng-include="'templates/forget-password.html'" ng-if="!loginflag"></div>
+
+  <script id="templates/sign-in.html" type="text/ng-template">
+    <ion-view title="掌上江泉 登录">
+      <ion-content>
+        <div class="list card">
+          <div class="item" align="center">
+            <img src="img/jq-log.png" width="160px" height="160px">
+
+            <p>创世纪伟业，造百年江泉</p>
+          </div>
+        </div>
+        <div class="list list-inset">
+          <label class="item item-input">
+            <span class="input-label">用户名</span>
+            <input type="text" ng-model="user.username" ng-change="change();"><span class="error">*</span>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">密  码</span>
+            <input type="password" ng-model="user.password" ng-change="change()"><span class="error">*</span>
+          </label>
+          <span class="error-text" id="loginerror" style="display: none;">*为必填项</span>
+        </div>
+        <div class="padding">
+          <button class="button button-block button-positive" ng-click="signIn(user)">
+            立即登录
+          </button>
+          <p class="text-center">
+            <a href="#/forgot-password" class="none-direct">找回密码</a>
+          </p>
+        </div>
+
+      </ion-content>
+    </ion-view>
+  </script>
+
+  <script id="templates/forget-password.html" type="text/ng-template">
+    <ion-view title="忘记密码">
+      <ion-content padding="true" align="center">
+        <div class="list card">
+          <img src="img/forgetpassword.png" width="160px" height="160px">
+
+          <h3>如果忘记密码<br/>请由同事代为发起<br/><b>“账户申请、修改、注销流程”</b><br/>以便找回密码。</h3>
+          <br>
+        </div>
+        <p>
+          返回 <a href="#/sign-in" class="none-direct">登录</a>
+        </p>
+      </ion-content>
+    </ion-view>
+  </script>
+
+</ion-view>

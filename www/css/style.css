@@ -1,0 +1,86 @@
+/*
+*  Created By LMT
+* 2015年11月28日16:22:30
+*/
+.blue {
+  color: #0c63ee;
+  border-bottom: 2px solid #0c63ee;
+}
+
+.two-level-nav {
+  cursor: pointer;
+  margin-bottom: -10px;
+}
+
+.error {
+  /*错误提示*/
+  color: red;
+  margin-right: 20px;
+}
+
+.error-text {
+  /*登录错误时的提示*/
+  color: red;
+  float: right;
+  font-size: xx-small;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.lmt-div-card {
+  /*主页面卡片的默认样式*/
+  background-color: white;
+}
+
+.none-direct {
+  /*菜单文字样式*/
+  text-decoration: none;
+}
+
+.lmt-menu-icons {
+  /*菜单图标的大小*/
+  width: 64px;
+  height: 64px;
+  border-radius: 25%;
+}
+
+.lmt-menu-div {
+  /*菜单图标的样式*/
+  cursor: pointer;
+}
+
+.lmt-div-weather_detial {
+  /*天气的详细信息*/
+  font-size: xx-small;
+  text-align: center;
+}
+
+.lmt-div-weather-city {
+  text-align: center;
+}
+
+.lmt-div-weather-img {
+  text-align: center;
+}
+
+.lmt-div-copyright {
+  margin-bottom: 0px;
+  position: absolute;
+  text-align: center;
+  font-size: xx-small;
+}
+
+/*设置页面*/
+.lmt-setting-div {
+  text-align: center;
+}
+
+.lmt-div-processcenter {
+  border: 2px solid #ffffff;
+  background-color: #1E90FF;
+  height: 60px;
+  color: whitesmoke;
+  line-height: 40px;
+  font-size: large;
+  overflow: hidden;
+}

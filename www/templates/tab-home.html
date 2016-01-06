@@ -1,0 +1,115 @@
+<ion-view view-title="首页">
+  <ion-content>
+    <ion-refresher
+      refreshing-text="正在刷新"
+      on-refresh="doRefresh()">
+    </ion-refresher>
+    <ion-list>
+      <div class="card lmt-div-card item">
+        <div class="row">
+          <div class="col lmt-div-weather-img">
+            <img style="margin-left: 10px" src="img/weather_100.png" id="img_weather" alt="Smiley face" width="50"
+                 height="50">
+          </div>
+          <div class="col lmt-div-weather-city">
+            <h3 style="margin-top: 12px;margin-left: 20px">{{city_name}}</h3>
+          </div>
+          <div class="col lmt-div-weather_detial">{{city_weather_temp}}<br>{{city_weather_key_word}}<br>{{city_weather_date}}
+          </div>
+        </div>
+      </div>
+      <div class="card lmt-div-card item">
+        <div class="row">
+          <div class="col text-center" ng-click="outworkingclick();">
+            <div class="lmt-menu-div">
+              <img src="img/menu-start-process.png" style="width:64px; height:64px; border-radius: 25%;">
+              <br>
+              <h5>{{outStatusMenu}}</h5>
+            </div>
+          </div>
+          <div class="col text-center">
+            <div class="lmt-menu-div">
+              <img src="img/menu-document.png" style="width:64px; height:64px; border-radius: 25%;">
+              <br>
+              <h5>公文</h5>
+            </div>
+          </div>
+          <div class="col text-center">
+            <div class="lmt-menu-div">
+              <img src="img/menu-leaving-apply.png" style="width:64px; height:64px; border-radius: 25%;">
+              <br>
+              <h5>请假申请</h5>
+            </div>
+          </div>
+          <div class="col text-center">
+            <div class="lmt-menu-div" ng-click="notic_list_click();">
+              <img src="img/menu-notices-list.png" style="width:64px; height:64px; border-radius: 25%;">
+              <br>
+              <h5>通知公告</h5>
+            </div>
+          </div>
+        </div>
+        <hr style="margin-left: 5%;margin-right: 5%;color: #dddddd">
+        <div class="row">
+          <div class="col text-center">
+            <div class="lmt-menu-div" ng-click="todo_list_click()">
+              <img src="img/report.jpg" style="width:64px; height:64px; border-radius: 25%;">
+              <br>
+              <h5>报表中心</h5>
+            </div>
+          </div>
+          <div class="col text-center">
+            <div class="lmt-menu-div">
+              <img src="img/menu-articals.png" style="width:64px; height:64px; border-radius: 25%;">
+              <br>
+              <h5>企业资讯</h5>
+            </div>
+          </div>
+          <div class="col text-center">
+            <div class="lmt-menu-div">
+              <img src="img/menu-email.png" style="width:64px; height:64px; border-radius: 25%;">
+              <br>
+              <h5>企业邮箱</h5>
+            </div>
+          </div>
+          <div class="col text-center" ng-click="address_book_click();">
+            <div class="lmt-menu-div">
+              <img src="img/menu-address-book.png" style="width:64px; height:64px; border-radius: 25%;">
+              <br>
+              <h5>通讯录</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card lmt-div-card item">
+        <div class="list">
+
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-email"></i>
+            未读邮件
+            <span class="badge badge-assertive">{{number_unread_email}}</span>
+          </a>
+
+          <a class="item item-icon-left item-icon-right" href="#">
+            <i class="icon ion-filing"></i>
+            待办任务
+            <span class="badge badge-assertive">{{number_todo_list}}</span>
+          </a>
+
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-document-text"></i>
+            未签收公文
+            <span class="badge badge-assertive">{{number_unsign_document}}</span>
+          </a>
+
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-calendar"></i>
+            待阅任务
+            <span class="badge badge-assertive">{{number_to_read}}</span>
+          </a>
+
+        </div>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

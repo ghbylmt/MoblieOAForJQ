@@ -1,0 +1,24 @@
+<!--个人信息页面详情页-->
+<ion-view>
+  <ion-content style="margin: 0 auto;padding: 0">
+    <div class="card text-center row-center col-center"
+         style="background-color: #1E90FF; width: 100%;height: 200px;margin: 0 auto;">
+      <img src="http://test.hsjq.com/Files/Photoes/{{userCode}}.jpg" class="row-center col-center" alt="图片暂无"
+           onerror="document.getElementById('img_setting_profile').setAttribute('src', '../img/noimage.png');"
+           id="img_setting_profile"
+           style=" border: 3px solid #fff; border-radius:50%; margin-top: 30px">
+      <h4 class="text-center" style="color: #ffffff">{{userName}}</h4>
+    </div>
+    <div class="card">
+      <ul class="list">
+        <a class="item">部门：{{departmentName}}</a>
+        <a class="item">职务：{{jobName}}</a>
+        <a class="item">员工编号：{{employeeId}}</a>
+        <a href="mailto:{{emailAddress}}" class="item icon-left ion-ios-email-outline">电子邮件：{{emailAddress}}</a>
+        <a class="item icon-left ion-android-phone-portrait" href="tel:{{userPhone}}"></i>
+          <span>联系电话：{{userPhone}}</span></a>
+      </ul>
+    </div>
+
+  </ion-content>
+</ion-view>

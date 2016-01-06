@@ -1,0 +1,22 @@
+<ion-view title="待办任务">
+  <div class="bar subheader-bar has-header">
+    <div class="row text-center">
+      <div class="col two-level-nav" ng-click="showTab('待办任务')" ng-class="{'blue':isOne}">待办任务</div>
+      <div class="col two-level-nav" ng-click="showTab('加签待办')" ng-class="{'blue':isTwo}">加签待办</div>
+    </div>
+  </div>
+  <ion-content class="has-subheader">
+    <div ng-include="'todolist.html'" ng-if="tabIndex=='待办任务'"></div>
+    <div ng-include="'signedtodolist.html'" ng-if="tabIndex=='加签待办'"></div>
+    <script type="text/ng-template" id="todolist.html">
+      <div class="list">
+        待办任务
+      </div>
+    </script>
+    <script type="text/ng-template" id="signedtodolist.html">
+      <div class="list">
+        加签待办任务
+      </div>
+    </script>
+  </ion-content>
+</ion-view>

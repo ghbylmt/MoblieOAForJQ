@@ -1,0 +1,29 @@
+<!--外出登记页面-->
+<ion-view title='返回登记'>
+  <ion-content>
+    <div class="card text-center row-center col-center"
+         style="background-color: #1E90FF; width: 100%;height: 200px;margin: 0 auto;">
+      <h3 class="text-center" style="  color: #ffffff; margin-top: 80px">返回登记</h3>
+    </div>
+    <div class="list">
+      <label class="item">{{userName}}</label>
+      <label class="item">
+        外出时间：{{outDate}}
+      </label>
+      <label class="item">
+        外出地点：{{outAddress}}
+      </label>
+      <label class="item">
+        外出事由：{{outReason}}
+      </label>
+      <label class="item item-input">
+        <!--<input placeholder="返回时间" ng-model="backtime" type="datetime" ng-click="pickBackDateTime();"/>-->
+        <!--<input type="datetime-local" value="2014-01-20T10:00">-->
+        返回时间： <input type="datetime-local" value="{{minDatetimeLocal}}">
+      </label>
+    </div>
+    <button class="button button-full button-positive" ng-click="btnBackClick(outer);">
+      确认提交
+    </button>
+  </ion-content>
+</ion-view>

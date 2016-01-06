@@ -1,0 +1,89 @@
+<ion-view view-title="审批中心">
+  <ion-content>
+    <div class="card text-center row-center col-center"
+         style="background-color: #1E90FF; width: 100%;height: 200px;margin: 0 auto;">
+      <h3 class="text-center" style="  color: #ffffff; margin-top: 80px">审批中心</h3>
+    </div>
+    <div class="card lmt-div-card item">
+      <div class="row">
+        <div class="col text-center">
+          <div class="lmt-menu-div" ng-click="startProcess();">
+            <img src="img/icondefult.png" style="width:64px; height:64px; border-radius: 25%;">
+            <br>
+            <h5>发起审批</h5>
+          </div>
+        </div>
+        <div class="col text-center">
+          <div class="lmt-menu-div" ng-click="toDoListClick();">
+            <img src="img/icondefult.png" style="width:64px; height:64px; border-radius: 25%;">
+            <br>
+            <h5>待办任务</h5>
+          </div>
+        </div>
+        <div class="col text-center">
+          <div class="lmt-menu-div">
+            <img src="img/icondefult.png" style="width:64px; height:64px; border-radius: 25%;">
+            <br>
+            <h5>已办（完成）</h5>
+          </div>
+        </div>
+        <div class="col text-center">
+          <div class="lmt-menu-div">
+            <img src="img/icondefult.png" style="width:64px; height:64px; border-radius: 25%;">
+            <br>
+            <h5>已办（未完成）</h5>
+          </div>
+        </div>
+      </div>
+      <hr style="margin-left: 5%;margin-right: 5%;color: #dddddd">
+      <div class="row">
+        <div class="col text-center">
+          <div class="lmt-menu-div" ng-click="">
+            <img src="img/icondefult.png" style="width:64px; height:64px; border-radius: 25%;">
+            <br>
+            <h5>已申请（完成）</h5>
+          </div>
+        </div>
+        <div class="col text-center">
+          <div class="lmt-menu-div">
+            <img src="img/icondefult.png" style="width:64px; height:64px; border-radius: 25%;">
+            <br>
+            <h5>已申请（未完成）</h5>
+          </div>
+        </div>
+        <div class="col text-center">
+          <div class="lmt-menu-div">
+            <img src="img/icondefult.png" style="width:64px; height:64px; border-radius: 25%;">
+            <br>
+            <h5>待阅任务</h5>
+          </div>
+        </div>
+        <div class="col text-center" ng-click="">
+          <div class="lmt-menu-div">
+            <img src="img/icondefult.png" style="width:64px; height:64px; border-radius: 25%;">
+            <br>
+            <h5>已阅任务</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ion-list>
+      <ion-item class="item-divider">待办任务</ion-item>
+      <ion-item class="item" ng-repeat="toDoItem in toDoList"></ion-item>
+      <ion-item class="item" ng-show="hasTodoList">查看更多...</ion-item>
+      <ion-item class="item" ng-show="!hasTodoList">您当前没有待办任务</ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item class="item-divider">待阅任务</ion-item>
+      <ion-item class="item" ng-repeat="toDoItem in toDoList"></ion-item>
+      <ion-item class="item" ng-show="hasReadList">查看更多...</ion-item>
+      <ion-item class="item" ng-show="!hasReadList">您当前没有待阅任务</ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item class="item-divider">已申请任务</ion-item>
+      <ion-item class="item" ng-repeat="toDoItem in toDoList"></ion-item>
+      <ion-item class="item" ng-show="hasApplyList">查看更多...</ion-item>
+      <ion-item class="item" ng-show="!hasApplyList">您当前没有已申请任务</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
